@@ -1,0 +1,6 @@
+C:\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.dll
+C:\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.pdb
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.csproj.AssemblyReference.cache
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.csproj.CoreCompileInputs.cache
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.dll
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.pdb

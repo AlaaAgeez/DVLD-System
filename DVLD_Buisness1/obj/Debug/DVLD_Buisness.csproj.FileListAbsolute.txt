@@ -1,0 +1,27 @@
+C:\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_Buisness1.dll
+C:\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_Buisness1.pdb
+C:\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_DataAccess1.dll
+C:\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_DataAccess1.pdb
+C:\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness.csproj.AssemblyReference.cache
+C:\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness.csproj.CoreCompileInputs.cache
+C:\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
+C:\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness1.dll
+C:\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness1.pdb
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_Buisness1.dll
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_Buisness1.pdb
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_DataAccess1.dll
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_DataAccess1.pdb
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness.csproj.AssemblyReference.cache
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness.csproj.CoreCompileInputs.cache
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness1.dll
+E:\الملف العام\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness1.pdb
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_Buisness1.dll
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_Buisness1.pdb
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_DataAccess1.dll
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\bin\Debug\DVLD_DataAccess1.pdb
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness.csproj.AssemblyReference.cache
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness.csproj.CoreCompileInputs.cache
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Bui.E5CEC4E3.Up2Date
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness1.dll
+D:\Programming\المشاريع\DVLD project\DVLD_Buisness1\obj\Debug\DVLD_Buisness1.pdb

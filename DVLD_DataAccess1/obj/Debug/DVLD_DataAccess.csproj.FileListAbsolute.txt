@@ -1,0 +1,18 @@
+C:\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.dll
+C:\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.pdb
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.dll
+C:\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.pdb
+E:\الملف العام\المشاريع\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.dll
+E:\الملف العام\المشاريع\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.pdb
+E:\الملف العام\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+E:\الملف العام\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+E:\الملف العام\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.dll
+E:\الملف العام\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.pdb
+D:\Programming\المشاريع\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.dll
+D:\Programming\المشاريع\DVLD project\DVLD_DataAccess1\bin\Debug\DVLD_DataAccess1.pdb
+D:\Programming\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+D:\Programming\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+D:\Programming\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.dll
+D:\Programming\المشاريع\DVLD project\DVLD_DataAccess1\obj\Debug\DVLD_DataAccess1.pdb
