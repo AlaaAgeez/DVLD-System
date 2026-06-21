@@ -1,49 +1,36 @@
-<body>
+# 🚗 DVLD Management System
+**Windows Desktop Application – .NET | SQL Server**
 
-<h1>🚗 DVLD Management System</h1>
-<p><strong>Windows Desktop Application – .NET | SQL Server</strong></p>
+🎥 System Demo (LinkedIn) :
+[[LinkedIn Video Link](https://www.linkedin.com/posts/mahmoudabdo-3w_%D8%A8%D8%B9%D8%AF-%D9%81%D8%AA%D8%B1%D8%A9-%D8%B4%D8%BA%D9%84-%D9%88%D8%AA%D8%B1%D9%83%D9%8A%D8%B2-%D8%AD%D8%A7%D8%A8%D8%A8-%D8%A3%D8%B4%D8%A7%D8%B1%D9%83-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%A7%D8%B4%D8%AA%D8%BA%D9%84%D8%AA-activity-7421195847364820992-nXr-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFitP5QBwe8wJl5b7z8sTQEV3iu9SlXMn5c)]
 
-<hr>
+---
 
-<h2>📌 Overview</h2>
-<p>
-The DVLD Management System is a full-scale Windows Desktop Application that simulates real-world operations of a Driving License & Vehicle Department.
-</p>
+## 📌 Overview
+The **DVLD Management System** is a full-scale **Windows Desktop Application** that simulates real-world operations of a **Driving License & Vehicle Department**.
 
-<p>
-The system is designed as a production-level administrative application, focusing on:
-</p>
+The system is designed as a **production-level administrative application**, focusing on:
+- Clean and scalable architecture
+- Strong separation of concerns
+- Robust validation and data integrity
+- Maintainability and long-term scalability
 
-<ul>
-  <li>Clean and scalable architecture</li>
-  <li>Strong separation of concerns</li>
-  <li>Robust validation and data integrity</li>
-  <li>Maintainability and long-term scalability</li>
-</ul>
+This is not a simple CRUD project.  
+It represents a **real governmental-style desktop system** with complex workflows and strict business rules.
 
-<p><strong>This is not a simple CRUD project.</strong></p>
-<p>
-It represents a real governmental-style desktop system with complex workflows and strict business rules.
-</p>
+---
 
-<hr>
+## ❓ Problem Statement
+Many desktop applications suffer from:
+- Mixing UI logic with business logic and database access
+- Weak validation and poor error handling
+- Difficult maintenance and scalability
+- Lack of workflow control and traceability
+- Absence of logging and monitoring
 
-<h2>❓ Problem Statement</h2>
-<p>Many desktop applications suffer from:</p>
+This project was built to solve these problems by applying **proper layered architecture** and **clean software engineering principles** from the ground up.
 
-<ul>
-  <li>Mixing UI logic with business logic and database access</li>
-  <li>Weak validation and poor error handling</li>
-  <li>Difficult maintenance and scalability</li>
-  <li>Lack of workflow control and traceability</li>
-  <li>Absence of logging and monitoring</li>
-</ul>
-
-<p>
-This project was built to solve these problems by applying proper layered architecture and clean software engineering principles from the ground up.
-</p>
-
-<hr>
+---
 
 ## 🧱 System Architecture
 
@@ -62,38 +49,31 @@ flowchart TB
     DAL --> DB
 ```
 
+## 🧱 Layer Responsibilities
 
-<h3>🧱 Layer Responsibilities</h3>
+### 🔹 Presentation Layer
+- Windows Forms user interface  
+- Handles user interaction and input only  
+- No business logic  
+- No direct database access  
 
-<h4>🔹 Presentation Layer</h4>
-<ul>
-  <li>Windows Forms user interface</li>
-  <li>Handles user interaction and input only</li>
-  <li>No business logic</li>
-  <li>No direct database access</li>
-</ul>
+---
 
-<h4>🔹 Business Layer</h4>
-<ul>
-  <li>Core business rules</li>
-  <li>Centralized validation logic</li>
-  <li>License lifecycle management</li>
-  <li>Application and workflow processing</li>
-</ul>
+### 🔹 Business Layer
+- Core business rules  
+- Centralized validation logic  
+- License lifecycle management  
+- Application and workflow processing  
 
-<h4>🔹 Data Access Layer</h4>
-<ul>
-  <li>SQL Server access using ADO.NET</li>
-  <li>Parameterized queries</li>
-  <li>Transaction-based operations (Commit / Rollback)</li>
-  <li>Secure and centralized data handling</li>
-</ul>
+---
 
-<hr>
+### 🔹 Data Access Layer
+- SQL Server access using ADO.NET  
+- Parameterized queries  
+- Transaction-based operations (Commit / Rollback)  
+- Secure and centralized data handling  
 
-<h2>📁 Project Structure</h2>
-
-<pre>
+```
 DVLD/
 │
 ├── PresentationLayer/
@@ -215,122 +195,100 @@ DVLD/
     ├── clsTestData.cs
     ├── clsTestTypeData.cs
     └── clsUserData.cs
-</pre>
+```
 
-<hr>
+## 🧼 Code Quality & Design
+- Clean Code principles  
+- Separation of Concerns  
+- Single Responsibility Principle (SRP)  
+- Reusable and maintainable components  
+- Clear and readable structure  
 
-<h2>🧼 Code Quality & Design</h2>
-<ul>
-  <li>Clean Code principles</li>
-  <li>Separation of Concerns</li>
-  <li>Single Responsibility Principle (SRP)</li>
-  <li>Reusable and maintainable components</li>
-  <li>Clear and readable structure</li>
-</ul>
+---
 
-<hr>
+## 🔐 Security & Data Integrity
+- SQL Injection prevention using parameterized queries  
+- SQL Server transactions (Commit / Rollback)  
+- Centralized validation across layers  
+- Secure handling of sensitive data  
 
-<h2>🔐 Security & Data Integrity</h2>
-<ul>
-  <li>SQL Injection prevention using parameterized queries</li>
-  <li>SQL Server transactions (Commit / Rollback)</li>
-  <li>Centralized validation across layers</li>
-  <li>Secure handling of sensitive data</li>
-</ul>
+---
 
-<hr>
+## 👥 Core Features
+- People & Drivers Management  
+- Local & International License Management  
+- First-time License Issuing  
+- License Renewal & Replacement  
+- Detained License Handling (Detain / Release)  
+- Driving Tests Scheduling and Execution  
+- Application workflow tracking  
+- Centralized Validation & Logging  
 
-<h2>👥 Core Features</h2>
-<ul>
-  <li>People & Drivers Management</li>
-  <li>Local & International License Management</li>
-  <li>First-time License Issuing</li>
-  <li>License Renewal & Replacement</li>
-  <li>Detained License Handling (Detain / Release)</li>
-  <li>Driving Tests Scheduling and Execution</li>
-  <li>Application workflow tracking</li>
-  <li>Centralized Validation & Logging</li>
-</ul>
+---
 
-<hr>
+## 🧾 Logging & Monitoring
+- Windows Event Logger integration  
+- Error, warning, and activity logging  
+- Improved debugging, auditing, and reliability  
 
-<h2>🧾 Logging & Monitoring</h2>
-<ul>
-  <li>Windows Event Logger integration</li>
-  <li>Error, warning, and activity logging</li>
-  <li>Improved debugging, auditing, and reliability</li>
-</ul>
+---
 
-<hr>
+## 🪟 Windows Integration
+- Windows Forms UI  
+- Windows Registry for application configuration  
+- Desktop shortcut support  
+- Native Windows Event Log usage  
 
-<h2>🪟 Windows Integration</h2>
-<ul>
-  <li>Windows Forms UI</li>
-  <li>Windows Registry for configuration</li>
-  <li>Desktop shortcut support</li>
-  <li>Native Windows Event Log usage</li>
-</ul>
+---
 
-<hr>
+## ⚙ Technology Stack
+- C# (.NET)  
+- Windows Forms  
+- ADO.NET  
+- Microsoft SQL Server  
+- SQL Server Management Studio (SSMS)  
+- Visual Studio 2022  
+- Git & GitHub  
 
-<h2>⚙ Technology Stack</h2>
-<ul>
-  <li>C# (.NET)</li>
-  <li>Windows Forms</li>
-  <li>ADO.NET</li>
-  <li>Microsoft SQL Server</li>
-  <li>SSMS</li>
-  <li>Visual Studio 2022</li>
-  <li>Git & GitHub</li>
-</ul>
+---
 
-<hr>
+## ▶ How to Run the Project
 
-<h2>▶ How to Run the Project</h2>
+### 1️⃣ Requirements
+- Windows Operating System  
+- Visual Studio 2022  
+- .NET Framework / .NET (based on project version)  
+- Microsoft SQL Server  
+- SQL Server Management Studio (SSMS)  
 
-<h3>1️⃣ Requirements</h3>
-<ul>
-  <li>Windows OS</li>
-  <li>Visual Studio 2022</li>
-  <li>.NET Framework / .NET</li>
-  <li>SQL Server</li>
-  <li>SSMS</li>
-</ul>
+---
 
-<h3>2️⃣ Database Setup</h3>
-<ul>
-  <li>Create database: DVLD_DB</li>
-  <li>Execute SQL scripts</li>
-  <li>Verify tables and relations</li>
-</ul>
+### 2️⃣ Database Setup
+1. Create a new SQL Server database (e.g. `DVLD_DB`)  
+2. Execute the provided SQL scripts  
+3. Verify tables and relationships  
 
-<h3>3️⃣ Configuration</h3>
-<ul>
-  <li>Open solution in Visual Studio</li>
-  <li>Update App.config connection string</li>
-</ul>
+---
 
-<h3>4️⃣ Run</h3>
-<ul>
-  <li>Build solution</li>
-  <li>Run application</li>
-</ul>
+### 3️⃣ Configuration
+1. Open the solution in Visual Studio  
+2. Update the connection string in `App.config`  
+3. Configure SQL Server credentials  
 
-<hr>
+---
 
-<h2>🎯 Project Goal</h2>
-<p>
-To demonstrate how to build a professional, secure, and maintainable Windows desktop system using correct architecture and real-world workflows.
-</p>
+### 4️⃣ Run
+- Build the solution  
+- Run the application from Visual Studio or the generated executable  
 
-<hr>
+---
 
-<h2>🚀 Final Note</h2>
-<p>
-This project is not about writing code that only works,
-but about building a system that is clean, secure, maintainable,
-and ready for real production environments.
-</p>
+## 🎯 Project Goal
+To demonstrate how to build a **professional, secure, and maintainable Windows desktop system** using correct architecture and real-world workflows.
 
-</body>
-</html>
+---
+
+## 🚀 Final Note
+This project is not about writing code that only works,  
+but about building a system that is **clean**, **secure**, **maintainable**,  
+and ready for **real production environments**.
