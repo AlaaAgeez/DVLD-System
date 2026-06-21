@@ -1,11 +1,6 @@
 # 🚗 DVLD Management System
 **Windows Desktop Application – .NET | SQL Server**
 
-🎥 System Demo (LinkedIn) :
-[[LinkedIn Video Link](https://www.linkedin.com/posts/mahmoudabdo-3w_%D8%A8%D8%B9%D8%AF-%D9%81%D8%AA%D8%B1%D8%A9-%D8%B4%D8%BA%D9%84-%D9%88%D8%AA%D8%B1%D9%83%D9%8A%D8%B2-%D8%AD%D8%A7%D8%A8%D8%A8-%D8%A3%D8%B4%D8%A7%D8%B1%D9%83-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%A7%D8%B4%D8%AA%D8%BA%D9%84%D8%AA-activity-7421195847364820992-nXr-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFitP5QBwe8wJl5b7z8sTQEV3iu9SlXMn5c)]
-
----
-
 ## 📌 Overview
 The **DVLD Management System** is a full-scale **Windows Desktop Application** that simulates real-world operations of a **Driving License & Vehicle Department**.
 
