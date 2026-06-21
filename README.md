@@ -45,9 +45,23 @@ This project was built to solve these problems by applying proper layered archit
 
 <hr>
 
-<h2>🧱 System Architecture</h2>
+## 🧱 System Architecture
 
-<h3>🔹 3-Layered Architecture Diagram</h3>
+### 🔹 3-Layered Architecture Diagram
+
+```mermaid
+
+flowchart TB
+    UI[Presentation Layer<br/>Windows Forms]
+    BL[Business Layer<br/>Rules • Validation • Workflows]
+    DAL[Data Access Layer<br/>ADO.NET • Transactions]
+    DB[(SQL Server)]
+
+    UI --> BL
+    BL --> DAL
+    DAL --> DB
+```
+
 
 <h3>🧱 Layer Responsibilities</h3>
 
