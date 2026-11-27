@@ -1,17 +1,14 @@
 # 🚗 DVLD Management System
-**Windows Desktop Application – .NET | SQL Server**
+**Windows Desktop Application - .NET | ADO.NET | SQL Server**
+
+---
 
 ## 📌 Overview
-The **DVLD Management System** is a full-scale **Windows Desktop Application** that simulates real-world operations of a **Driving License & Vehicle Department**.
+The DVLD Management System is a full-scale Windows Desktop Application that simulates the real-world operations of a Driving License & Vehicle Department.
 
-The system is designed as a **production-level administrative application**, focusing on:
-- Clean and scalable architecture
-- Strong separation of concerns
-- Robust validation and data integrity
-- Maintainability and long-term scalability
+It was built as the capstone project of a software development course, applying proper layered architecture and clean software engineering principles end to end.
 
-This is not a simple CRUD project.  
-It represents a **real governmental-style desktop system** with complex workflows and strict business rules.
+The system handles the complete driving-license lifecycle: applications, tests, license issuing, renewal, replacement, international licenses, and detaining, with strict business rules and full traceability.
 
 ---
 
@@ -23,16 +20,15 @@ Many desktop applications suffer from:
 - Lack of workflow control and traceability
 - Absence of logging and monitoring
 
-This project was built to solve these problems by applying **proper layered architecture** and **clean software engineering principles** from the ground up.
+This project was built to solve these problems by applying proper layered architecture from the ground up.
 
 ---
 
-## 🧱 System Architecture
+## 🏗️ System Architecture
 
 ### 🔹 3-Layered Architecture Diagram
 
 ```mermaid
-
 flowchart TB
     UI[Presentation Layer<br/>Windows Forms]
     BL[Business Layer<br/>Rules • Validation • Workflows]
@@ -44,246 +40,116 @@ flowchart TB
     DAL --> DB
 ```
 
-## 🧱 Layer Responsibilities
+### 🔹 Layer Responsibilities
 
-### 🔹 Presentation Layer
-- Windows Forms user interface  
-- Handles user interaction and input only  
-- No business logic  
-- No direct database access  
+**Presentation Layer**
+- Windows Forms user interface
+- Handles user interaction and input only
+- No business logic, no direct database access
+
+**Business Layer**
+- Core business rules and centralized validation
+- License lifecycle management
+- Application and workflow processing
+
+**Data Access Layer**
+- SQL Server access using ADO.NET
+- Parameterized queries (SQL injection prevention)
+- Transaction-based operations (Commit / Rollback)
 
 ---
 
-### 🔹 Business Layer
-- Core business rules  
-- Centralized validation logic  
-- License lifecycle management  
-- Application and workflow processing  
-
----
-
-### 🔹 Data Access Layer
-- SQL Server access using ADO.NET  
-- Parameterized queries  
-- Transaction-based operations (Commit / Rollback)  
-- Secure and centralized data handling  
+## 📂 Repository Contents
 
 ```
-DVLD/
+DVLD-System/
 │
-├── PresentationLayer/
-│   │
-│   ├── Applications/
-│   │   ├── Application Types/
-│   │   │   ├── frmEditApplicationType.cs
-│   │   │   └── frmListApplicationTypes.cs
-│   │   │
-│   │   ├── Controllers/
-│   │   │   ├── ctrlApplicationBasicInfo.cs
-│   │   │   └── ctrlDrivingLicenseApplicationInfo.cs
-│   │   │
-│   │   ├── Local Driving License/
-│   │   │   ├── frmAddUpdateLocalDrivingLicenseApplication.cs
-│   │   │   ├── frmListLocalDrivingLicenseApplications.cs
-│   │   │   ├── frmLocalDrivingLicenseApplicationInfo.cs
-│   │   │   ├── frmRenewLocalDrivingLicenseApplication.cs
-│   │   │   └── frmReplaceLostOrDamagedLicenseApplication.cs
-│   │   │
-│   │   └── International License/
-│   │       ├── frmListInternationalLicenseApplications.cs
-│   │       └── frmNewInternationalLicenseApplication.cs
-│   │
-│   ├── Drivers/
-│   │   └── frmListDrivers.cs
-│   │
-│   ├── Global Classes/
-│   │   ├── clsGlobal.cs
-│   │   └── clsValidation.cs
-│   │
-│   ├── Licenses/
-│   │   ├── Controllers/
-│   │   │   ├── ctrlDriverInternationalLicenseInfo.cs
-│   │   │   ├── ctrlDriverLicenseInfo.cs
-│   │   │   ├── ctrlDriverLicenseInfoWithFilter.cs
-│   │   │   └── ctrlDriverLicenses.cs
-│   │   │
-│   │   ├── Detain License/
-│   │   │   ├── frmDetainLicenseApplication.cs
-│   │   │   ├── frmListDetainedLicenses.cs
-│   │   │   └── frmReleaseDetainedLicenseApplication.cs
-│   │   │
-│   │   └── Local Licenses/
-│   │       ├── frmShowLicenseInfo.cs
-│   │       ├── frmIssueDriverLicenseFirstTime.cs
-│   │       ├── frmShowInternationalLicenseInfo.cs
-│   │       └── frmShowPersonLicenseHistory.cs
-│   │
-│   ├── Login/
-│   │   └── frmLogin.cs
-│   │
-│   ├── People/
-│   │   ├── UserControllers/
-│   │   │   ├── ctrlPersonCardWithFilter.cs
-│   │   │   └── ctrlShowPersonInfo.cs
-│   │   ├── FrmAddUpdateNewPerson.cs
-│   │   ├── frmFindPerson.cs
-│   │   ├── FrmManagePeople.cs
-│   │   └── FrmShowPersonDetails.cs
-│   │
-│   ├── Tests/
-│   │   ├── Controllers/
-│   │   │   ├── ctrlScheduleTest.cs
-│   │   │   └── ctrlScheduledTest.cs
-│   │   │
-│   │   ├── Test Types/
-│   │   │   ├── frmEditTestType.cs
-│   │   │   └── frmListTestTypes.cs
-│   │   │
-│   │   ├── frmListTestAppointments.cs
-│   │   ├── frmScheduleTest.cs
-│   │   └── frmTakeTest.cs
-│   │
-│   ├── Users/
-│   │   ├── ctrlUserCard.cs
-│   │   ├── frmAddUpdateUser.cs
-│   │   ├── frmChangePassword.cs
-│   │   ├── frmListUsers.cs
-│   │   └── frmUserInfo.cs
-│   │
-│   ├── FrmMain.cs
-│   ├── Program.cs
-│   ├── App.config
-│   └── app.manifest
-│
-├── BusinessLayer/
-│   ├── clsApplication.cs
-│   ├── clsApplicationType.cs
-│   ├── clsCountry.cs
-│   ├── clsDetainedLicense.cs
-│   ├── clsDriver.cs
-│   ├── clsGlobalBusiness.cs
-│   ├── clsInternationalLicense.cs
-│   ├── clsLicense.cs
-│   ├── clsLicenseClass.cs
-│   ├── clsLocalDrivingLicenseApplication.cs
-│   ├── clsLogger.cs
+├── DVLD_Buisness1/        # Business layer (rules, validation, workflows)
 │   ├── clsPerson.cs
-│   ├── clsTest.cs
-│   ├── clsTestAppointment.cs
-│   ├── clsTestType.cs
-│   └── clsUser.cs
+│   ├── clsApplication.cs
+│   ├── clsLocalDrivingLicenseApplication.cs
+│   ├── clsLicense.cs
+│   └── ...
 │
-└── DataAccessLayer/
-    ├── clsApplicationData.cs
-    ├── clsApplicationTypeData.cs
-    ├── clsCountryData.cs
-    ├── clsDataAccessSettings.cs
-    ├── clsDetainedLicenseData.cs
-    ├── clsDriverData.cs
-    ├── clsInternationalLicenseData.cs
-    ├── clsLicenseClassData.cs
-    ├── clsLicenseData.cs
-    ├── clsLocalDrivingLicenseApplicationData.cs
-    ├── clsLoggerData.cs
-    ├── clsPersonData.cs
-    ├── clsTestAppointmentData.cs
-    ├── clsTestData.cs
-    ├── clsTestTypeData.cs
-    └── clsUserData.cs
+├── DVLD_DataAccess1/      # Data access layer (ADO.NET, parameterized queries)
+│   ├── clsPersonData.cs
+│   ├── clsApplicationData.cs
+│   ├── clsDataAccessString.cs   # connection string lives here
+│   └── ...
+│
+├── DVLD.bak               # SQL Server database backup (restore to run)
+└── Images/                # sample person photos used by the app
 ```
 
-## 🧼 Code Quality & Design
-- Clean Code principles  
-- Separation of Concerns  
-- Single Responsibility Principle (SRP)  
-- Reusable and maintainable components  
-- Clear and readable structure  
-
----
-
-## 🔐 Security & Data Integrity
-- SQL Injection prevention using parameterized queries  
-- SQL Server transactions (Commit / Rollback)  
-- Centralized validation across layers  
-- Secure handling of sensitive data  
+> **Note:** The Windows Forms presentation layer is being prepared for upload and is not in this repository yet. The two class libraries here show the business rules and data access design in full.
 
 ---
 
 ## 👥 Core Features
-- People & Drivers Management  
-- Local & International License Management  
-- First-time License Issuing  
-- License Renewal & Replacement  
-- Detained License Handling (Detain / Release)  
-- Driving Tests Scheduling and Execution  
-- Application workflow tracking  
-- Centralized Validation & Logging  
+- People & Drivers Management
+- Local & International License Management
+- First-time License Issuing
+- License Renewal & Replacement (lost/damaged)
+- Detained License Handling (Detain / Release)
+- Driving Tests Scheduling and Execution (vision, theory, practical)
+- Application workflow tracking
+- User management with permissions
+- Centralized Validation & Logging
+
+---
+
+## 🧼 Code Quality & Design
+- Clean Code principles
+- Separation of Concerns
+- Single Responsibility Principle (SRP)
+- Reusable and maintainable components
+
+---
+
+## 🔐 Security & Data Integrity
+- SQL Injection prevention using parameterized queries
+- SQL Server transactions (Commit / Rollback)
+- Centralized validation across layers
 
 ---
 
 ## 🧾 Logging & Monitoring
-- Windows Event Logger integration  
-- Error, warning, and activity logging  
-- Improved debugging, auditing, and reliability  
+- Windows Event Logger integration
+- Error, warning, and activity logging
+- Improved debugging, auditing, and reliability
 
 ---
 
-## 🪟 Windows Integration
-- Windows Forms UI  
-- Windows Registry for application configuration  
-- Desktop shortcut support  
-- Native Windows Event Log usage  
+## ⚙️ Technology Stack
+- C# (.NET Framework, Windows Forms)
+- ADO.NET
+- Microsoft SQL Server + SSMS
+- Visual Studio 2022
+- Git & GitHub
 
 ---
 
-## ⚙ Technology Stack
-- C# (.NET)  
-- Windows Forms  
-- ADO.NET  
-- Microsoft SQL Server  
-- SQL Server Management Studio (SSMS)  
-- Visual Studio 2022  
-- Git & GitHub  
-
----
-
-## ▶ How to Run the Project
+## ▶️ Getting Started
 
 ### 1️⃣ Requirements
-- Windows Operating System  
-- Visual Studio 2022  
-- .NET Framework / .NET (based on project version)  
-- Microsoft SQL Server  
-- SQL Server Management Studio (SSMS)  
-
----
+- Windows
+- Visual Studio 2022
+- .NET Framework 4.7.2+
+- Microsoft SQL Server + SSMS
 
 ### 2️⃣ Database Setup
-1. Create a new SQL Server database (e.g. `DVLD_DB`)  
-2. Execute the provided SQL scripts  
-3. Verify tables and relationships  
-
----
+1. Open SSMS and connect to your SQL Server instance.
+2. Right-click **Databases** → **Restore Database** → **Device** → select the included `DVLD.bak`.
+3. Verify the tables and relationships were created.
 
 ### 3️⃣ Configuration
-1. Open the solution in Visual Studio  
-2. Update the connection string in `App.config`  
-3. Configure SQL Server credentials  
-
----
+1. Open `DVLD_DataAccess1/clsDataAccessString.cs`.
+2. Update the connection string to point to your SQL Server instance. Prefer Windows Authentication (`Integrated Security=True`) or a dedicated SQL login - avoid using `sa` outside a course environment.
 
 ### 4️⃣ Run
-- Build the solution  
-- Run the application from Visual Studio or the generated executable  
+- Open the projects in Visual Studio, build, and run.
 
 ---
 
 ## 🎯 Project Goal
-To demonstrate how to build a **professional, secure, and maintainable Windows desktop system** using correct architecture and real-world workflows.
-
----
-
-## 🚀 Final Note
-This project is not about writing code that only works,  
-but about building a system that is **clean**, **secure**, **maintainable**,  
-and ready for **real production environments**.
+To demonstrate how to build a professional, secure, and maintainable Windows desktop system using correct architecture and real-world workflows.
