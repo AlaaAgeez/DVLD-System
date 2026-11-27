@@ -81,7 +81,7 @@ DVLD-System/
 └── Images/                # sample person photos used by the app
 ```
 
-> **Note:** The Windows Forms presentation layer is being prepared for upload and is not in this repository yet. The two class libraries here show the business rules and data access design in full.
+> **Note:** This repository contains the business and data access layers, the database backup and sample images. The Windows Forms presentation layer is not included here.
 
 ---
 
